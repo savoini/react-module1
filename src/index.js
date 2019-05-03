@@ -19,7 +19,7 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <h1>
-Valor atual
+          Valor atual
           {this.state.counter}
         </h1>
         <Button onClick={this.handleClick}>Somar</Button>
