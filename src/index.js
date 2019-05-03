@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { render } from "react-dom";
 
 class Button extends React.Component {
@@ -11,6 +12,15 @@ class Button extends React.Component {
   }
 }
 
+Button.defaultProps = {
+  children: "Salvar"
+};
+
+Button.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  children: PropTypes.string
+};
+
 class App extends React.Component {
   handleClick() {
     alert("botão clicado");
@@ -20,6 +30,8 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <h1>Hello</h1>
+        <Button onClick={this.handleClick} />
+        <br />
         <Button onClick={this.handleClick}>Enviar</Button>
       </React.Fragment>
     );
