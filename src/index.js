@@ -1,12 +1,12 @@
-import React from "react";
-import { render } from "react-dom";
+import React from 'react';
+import { render } from 'react-dom';
 
-import Button from "./Button";
-import "./style.scss";
+import Button from './Button';
+import './style.scss';
 
 class App extends React.Component {
   state = {
-    counter: 0
+    counter: 0,
   };
 
   handleClick = () => {
@@ -18,11 +18,14 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <h1>Valor atual {this.state.counter}</h1>
+        <h1>
+Valor atual
+          {this.state.counter}
+        </h1>
         <Button onClick={this.handleClick}>Somar</Button>
       </React.Fragment>
     );
   }
 }
 
-render(<App />, document.getElementById("app"));
+render(<App />, document.getElementById('app'));
