@@ -1,8 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { render } from "react-dom";
 
 import Button from "./Button";
+import "./style.scss";
 
 class App extends React.Component {
   state = {
